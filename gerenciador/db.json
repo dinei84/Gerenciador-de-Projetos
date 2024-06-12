@@ -10,6 +10,15 @@
       },
       "gerenciador": 0,
       "services": []
+    },
+    {
+      "id": "8379",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "gerenciador": 0,
+      "services": []
     }
   ],
   "categories": [
