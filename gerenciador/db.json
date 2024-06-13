@@ -30,6 +30,39 @@
       },
       "gerenciador": 0,
       "services": []
+    },
+    {
+      "id": "253b",
+      "name": "test3",
+      "budget": "3000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "gerenciador": 0,
+      "services": []
+    },
+    {
+      "id": "9ec5",
+      "name": "teste 4",
+      "budget": "3000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "gerenciador": 0,
+      "services": []
+    },
+    {
+      "id": "aa10",
+      "name": "teste 5",
+      "budget": "4000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "gerenciador": 0,
+      "services": []
     }
   ],
   "categories": [
