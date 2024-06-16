@@ -1,45 +1,12 @@
 {
   "projects": [
     {
-      "id": "7a94",
-      "name": "teste 1",
-      "budget": "999",
+      "id": "2c7d",
+      "name": "teste4",
+      "budget": "22121212",
       "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "gerenciador": 0,
-      "services": []
-    },
-    {
-      "id": "b63b",
-      "name": "teste 2",
-      "budget": "1999",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "gerenciador": 0,
-      "services": []
-    },
-    {
-      "id": "b8c6",
-      "name": "TESTANDO",
-      "budget": "30000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "gerenciador": 0,
-      "services": []
-    },
-    {
-      "id": "5e20",
-      "name": "Novo Projeto",
-      "budget": "1000",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
       "gerenciador": 0,
       "services": []
