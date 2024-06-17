@@ -21,7 +21,7 @@ function Project() {
                 setProject(data)
             })
             .catch((err) => console.log(err)) // Corrigido para imprimir o erro corretamente
-        }, 1000)
+        }, 400)
     }, [id])
 
     return (
