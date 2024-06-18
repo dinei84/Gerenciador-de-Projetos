@@ -2,11 +2,13 @@ import styles from './Project.module.css'
 import { Form, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Loading from '../layout/Loading'
+import Container from '../layout/Container'
 
 function Project() {
     const { id } = useParams()
     
     const [project, setProject] = useState([])
+    const [showProjectForm, setShowProjectForm] = useState(false)
 
     useEffect(() => {
         setTimeout(() => {
@@ -20,14 +22,44 @@ function Project() {
             .then((data) => {
                 setProject(data)
             })
-            .catch((err) => console.log(err)) // Corrigido para imprimir o erro corretamente
+            .catch((err) => console.log(err))
         }, 400)
     }, [id])
+
+    function toggleProjectForm(){
+        setShowProjectForm(!showProjectForm)
+    }
 
     return (
         <>
             {project.name ? (
-                <p>{project.name}</p>
+                <div className={styles.project_details}>
+                    <Container customClass='column'>
+                        <div className={styles.details_container}>
+                            <h1>Projeto: {project.name}</h1>
+                            <button className={styles.btn} onClick={toggleProjectForm}>
+                               {!showProjectForm ? 'Editar Projeto' : 'Fechar'}
+                            </button>
+                            {!showProjectForm ? (
+                                <div className={styles.project_info}>
+                                    <p>
+                                        <span>Categoria:</span>{project.category.name}
+                                    </p>
+                                    <p>
+                                        <span>Total de Orçamento:</span> R${project.budget}
+                                    </p>
+                                    <p>
+                                        <span>Total de Utilizado:</span> R${project.gerenciador}
+                                    </p>
+                                </div>
+                            ) : (
+                                <div className={styles.project_info}>
+                                    <p>Detalhes do Projeto</p>
+                                </div>
+                            )}
+                        </div>
+                    </Container>
+                </div>
             ) : (
                 <Loading/>
             )}
