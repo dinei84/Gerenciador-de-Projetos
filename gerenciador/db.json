@@ -1,17 +1,5 @@
 {
-  "projects": [
-    {
-      "id": "2c7d",
-      "name": "teste4",
-      "budget": "22121212",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "gerenciador": 0,
-      "services": []
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": "1",

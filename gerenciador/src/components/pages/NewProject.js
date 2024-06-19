@@ -7,7 +7,7 @@ function NewProject() {
 
     function createPost(project) {
         // Initialize Gerenciador de Projetos and services
-        project.gerenciador = 0;
+        project.cost = 0;
         project.services = [];
 
         fetch('http://localhost:5000/projects', {

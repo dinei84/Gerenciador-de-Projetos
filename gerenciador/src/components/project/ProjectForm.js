@@ -1,79 +1,78 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
-import Input from '../form/Input'
-import Select from '../form/Select'
-import SubmitButton from '../form/SubmitButton'
+import Input from "../form/Input";
+import Select from "../form/Select";
+import SubmitButton from "../form/SubmitButton";
 
-import styles from './ProjectForm.module.css'
+import styles from "./ProjectForm.module.css";
 
-function ProjectForm({handleSubmit, btnText, projectData}){
-
-    const [project, setProject] = useState(projectData || {})
-    const [categories, setCategories] = useState([])
+function ProjectForm({ handleSubmit, btnText, projectData }) {
+  const [project, setProject] = useState(projectData || {});
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/categories', {
-      method: 'GET',
+    fetch("http://localhost:5000/categories", {
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setCategories(data)
-      })
-  }, [])
+        setCategories(data);
+      });
+  }, []);
 
   const submit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     //console.log(project)
-    handleSubmit(project)
-  }
+    handleSubmit(project);
+  };
 
-  function handleChange(e){
-    setProject({...project, [e.target.name]: e.target.value })
+  function handleChange(e) {
+    setProject({ ...project, [e.target.name]: e.target.value });
   }
-  function handleCategory(e){
+  function handleCategory(e) {
     setProject({
-        ...project,
-        category: {
+      ...project,
+      category: {
         id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text,
-        }, 
-    })
+      },
+    });
   }
 
-    return(
-        <form onSubmit={submit} className={styles.form}>
-            <Input 
-                type='text' 
-                text='Nome do Projeto' 
-                name='name' 
-                placeholder='Insira o nome do projeto'
-                handleOnChange={handleChange}
-                value={project.name ? project.name : ''}
-                />
+  return (
+    <form onSubmit={submit} className={styles.form}>
+      <Input
+        type="text"
+        text="Nome do Projeto"
+        name="name"
+        placeholder="Insira o nome do projeto"
+        handleOnChange={handleChange}
+        value={project.name ? project.name : ""}
+      />
 
-            <Input 
-                type='number' 
-                text='Orçamento do Projeto' 
-                name='budget' 
-                placeholder='Insira o orçamento total'
-                handleOnChange={handleChange}
-                value={project.budget ? project.budget : ''}
-                />
+      <Input
+        type="number"
+        text="Orçamento do Projeto"
+        name="budget"
+        placeholder="Insira o orçamento total"
+        handleOnChange={handleChange}
+        value={project.budget ? project.budget : ""}
+      />
 
-            <Select 
-            name='category_id' 
-            text='Selecione uma Categoria' 
-            options={categories}
-            handleOnChange={handleCategory}
-            value={project.category ? project.category.id : ''}
-            />
+      <Select
+        name="category_id"
+        text="Selecione uma Categoria"
+        options={categories}
+        handleOnChange={handleCategory}
+        value={project.category ? project.category.id : ""}
+      />
 
-            <SubmitButton text={btnText}/>
-        </form>
-    )
+      <SubmitButton text={btnText} />
+    </form>
+  );
 }
 
-export default ProjectForm
+export default ProjectForm;
