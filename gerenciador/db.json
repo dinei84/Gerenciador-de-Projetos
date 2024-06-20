@@ -1,5 +1,24 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "d1d1",
+      "name": "Novo serviço",
+      "budget": "100",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": null,
+      "services": [
+        {
+          "id": "1262ff78-ad97-456a-9a29-54da9abec3ea"
+        },
+        {
+          "id": "c824d81d-9080-4e93-b230-9acd1ef0fb77"
+        }
+      ]
+    }
+  ],
   "categories": [
     {
       "id": "1",
