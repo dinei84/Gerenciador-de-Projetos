@@ -113,6 +113,7 @@ function Project() {
         setServices(servicesUpdated)
         setMessage('Serviço removido com sucesso!')
       })
+      .catch((err)=> console.log(err))
   }
 
   function toggleProjectForm() {

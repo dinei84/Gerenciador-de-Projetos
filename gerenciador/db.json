@@ -11,10 +11,36 @@
       "cost": null,
       "services": [
         {
-          "id": "1262ff78-ad97-456a-9a29-54da9abec3ea"
+          "id": "bcd64850-010c-44a6-bd91-34219787a3a0"
         },
         {
-          "id": "c824d81d-9080-4e93-b230-9acd1ef0fb77"
+          "id": "75f153d9-51d0-4b51-9fb0-e61781d2f373"
+        }
+      ]
+    },
+    {
+      "id": "01dd",
+      "name": "rio verde",
+      "budget": "5000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": null,
+      "services": []
+    },
+    {
+      "id": "979b",
+      "name": "rondonopolis",
+      "budget": "5000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": null,
+      "services": [
+        {
+          "id": "86f4a630-0ff5-4a96-9895-974a2b29c7f9"
         }
       ]
     }
